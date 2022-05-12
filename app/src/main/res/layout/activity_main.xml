@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/B4"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#5ED177"
+        android:text="B4 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B5"
+        app:layout_constraintTop_toBottomOf="@+id/A9" />
+
+    <Button
+        android:id="@+id/B3"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="#5ED177"
+        android:text="B3  Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B4"
+        app:layout_constraintTop_toBottomOf="@+id/A8" />
+
+    <Button
+        android:id="@+id/B9"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#5ED177"
+        android:text="B9 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B10"
+        app:layout_constraintTop_toBottomOf="@+id/B4" />
+
+    <Button
+        android:id="@+id/B6"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#5ED177"
+        android:text="B6 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B7"
+        app:layout_constraintTop_toBottomOf="@+id/B1" />
+
+    <Button
+        android:id="@+id/B7"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="9dp"
+        android:backgroundTint="#5ED177"
+        android:text="B7 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B8"
+        app:layout_constraintTop_toBottomOf="@+id/B2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="313dp"
+        android:text="B Section"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/A7" />
+
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="7dp"
+        android:backgroundTint="#E34040"
+        android:text="B1 Occupied"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/B10"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="38dp"
+        android:backgroundTint="#5ED177"
+        android:text="B10 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B5" />
+
+    <Button
+        android:id="@+id/B8"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="#5ED177"
+        android:text="B8 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B9"
+        app:layout_constraintTop_toBottomOf="@+id/B3" />
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="9dp"
+        android:backgroundTint="#E6D45F"
+        android:text="B2 Reserved"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/B3"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/B5"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="38dp"
+        android:backgroundTint="#5ED177"
+        android:text="B5 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/A10" />
+
+    <Button
+        android:id="@+id/A2"
+        android:layout_width="62dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="11dp"
+        android:backgroundTint="#E6D45F"
+        android:text="A2 Reserved"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/A10"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="38dp"
+        android:backgroundTint="#5ED177"
+        android:text="A10 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/A5" />
+
+    <Button
+        android:id="@+id/A9"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#5ED177"
+        android:text="A9 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A10"
+        app:layout_constraintTop_toBottomOf="@+id/A4" />
+
+    <Button
+        android:id="@+id/A8"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="#5ED177"
+        android:text="A8 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A9"
+        app:layout_constraintTop_toBottomOf="@+id/A3" />
+
+    <Button
+        android:id="@+id/A7"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="9dp"
+        android:backgroundTint="#5ED177"
+        android:text="A7 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A8"
+        app:layout_constraintTop_toBottomOf="@+id/A2" />
+
+    <Button
+        android:id="@+id/A6"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#5ED177"
+        android:text="A6 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A7"
+        app:layout_constraintTop_toBottomOf="@+id/A1" />
+
+    <Button
+        android:id="@+id/A5"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="38dp"
+        android:backgroundTint="#5ED177"
+        android:text="A5 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/A3"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="#5ED177"
+        android:text="A3  Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A4"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/A4"
+        android:layout_width="64dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#5ED177"
+        android:text="A4 Free"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A5"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/A1"
+        android:layout_width="66dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="#E34040"
+        android:text="A1 Occupied"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/A2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="87dp"
+        android:text="LuLu Hypermarket Garage"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="123dp"
+        android:text="Chosen Parking Spot: B4 - Floor 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B9" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="318dp"
+        android:text="Status: Free"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="332dp"
+        android:text="Floor 1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="307dp"
+        android:text="A Section"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="139dp"
+        android:text="Charging Rate: $8/hour - Next Hours: $5"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="275dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="68dp"
+        android:text="Book Spot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
