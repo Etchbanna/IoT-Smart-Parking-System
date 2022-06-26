@@ -1,6 +1,7 @@
 package com.example.parkingmobileapp;
 import static java.security.AccessController.getContext;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.os.*;
@@ -12,7 +13,9 @@ import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ParkingLayoutActivity extends AppCompatActivity {
 
@@ -20,6 +23,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView chosen=(TextView)findViewById(R.id.chosen_spot);
+        TextView status=(TextView)findViewById(R.id.spot_status);
+
 
         Button A1=(Button)findViewById(R.id.A1);
         Button A2=(Button)findViewById(R.id.A2);
@@ -43,10 +50,78 @@ public class ParkingLayoutActivity extends AppCompatActivity {
         Button B9=(Button)findViewById(R.id.B9);
         Button B10=(Button)findViewById(R.id.B10);
 
+        Button Btn4=(Button)findViewById(R.id.button4);
+
+        Btn4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(ParkingLayoutActivity.this,LocationsActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         DatabaseAdapter mDbHelper = new DatabaseAdapter(getBaseContext());
         mDbHelper.createDatabase();
         mDbHelper.open();
+
+
+        View.OnClickListener ButtonListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                chosen.setText(""+ Integer.toString(v.getId())+" - Floor 1");
+                switch(v.getId()){
+                    case R.id.A1:
+                        Cursor a1c = mDbHelper.getA1Status();
+                        String A1Status=a1c.getString(0);
+                        if(A1Status.equals("o")){
+                            status.setText("Occupied");
+                        }
+                        else if(A1Status.equals("f")){
+                            status.setText("Free");
+                        }
+                        else if(A1Status.equals("r")){
+                            status.setText("Reserved");
+
+                        }
+                        break;
+                    case R.id.A2:
+                        Cursor a2c = mDbHelper.getA2Status();
+                        String A2Status=a2c.getString(0);
+                        if(A2Status.equals("o")){
+                            status.setText("Occupied");
+                        }
+                        else if(A2Status.equals("f")){
+                            status.setText("Free");
+                        }
+                        else if(A2Status.equals("r")){
+                            status.setText("Reserved");
+                        }
+                        break;
+                    case R.id.A3:
+                        Cursor a3c = mDbHelper.getA3Status();
+                        String A3Status=a3c.getString(0);
+                        if(A3Status.equals("o")){
+                            status.setText("Occupied");
+                        }
+                        else if(A3Status.equals("f")){
+                            status.setText("Free");
+                        }
+                        else if(A3Status.equals("r")){
+                            status.setText("Reserved");
+                        }
+                        break;
+                }
+
+                // do something when the button is clicked
+            }
+        };
+
+        A1.setOnClickListener(ButtonListener);
+        A2.setOnClickListener(ButtonListener);
+        A3.setOnClickListener(ButtonListener);
+
+
+
 
 
         Handler uiCallback = new Handler () {

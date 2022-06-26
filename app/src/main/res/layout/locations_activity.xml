@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".LocationsActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".LocationsActivity">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="496dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="199dp"
+            android:text="4km"
+            android:textColor="#FF5252"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="331dp"
+            android:layout_marginTop="384dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="311dp"
+            android:text="2.3km"
+            android:textColor="#FF5252"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="331dp"
+            android:layout_marginTop="612dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="83dp"
+            android:text="4.5km"
+            android:textColor="#FF5252"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="63dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="333dp"
+            android:layout_marginTop="273dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="422dp"
+            android:text="1.7km"
+            android:textColor="#FF5252"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="379dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="532dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="119dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="National Bank Outdoor Parking"
+            android:textAllCaps="false"
+            android:textColor="#448AFF"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="379dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="420dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="237dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Point 90 Mall Garage"
+            android:textAllCaps="false"
+            android:textColor="#448AFF"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="379dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="309dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="348dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Wadi Degla Club Garage"
+            android:textAllCaps="false"
+            android:textColor="#448AFF"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="379dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="197dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="460dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Lulu Hypermarket Garage"
+            android:textAllCaps="false"
+            android:textColor="#448AFF"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="297dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="98dp"
+            android:layout_marginBottom="535dp"
+            android:text="Nearest Parking Locations"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
