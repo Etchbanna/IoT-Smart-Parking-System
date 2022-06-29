@@ -4,8 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.14427083333333332" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/info_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/font/.xml" value="0.1" />
+        <entry key="app/src/main/res/font/actor.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/ParkedInfoActivity.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2645904541015625" />
+        <entry key="app/src/main/res/layout/bank_activity.xml" value="0.26220703125" />
+        <entry key="app/src/main/res/layout/info_activity.xml" value="0.3843994140625" />
+        <entry key="app/src/main/res/layout/locations_activity.xml" value="0.19216461181640626" />
+        <entry key="app/src/main/res/layout/lulu_activity.xml" value="0.20846252441406252" />
+        <entry key="app/src/main/res/layout/p90_activity.xml" value="0.20104370117187503" />
+        <entry key="app/src/main/res/layout/parked_info_activity.xml" value="0.22554347826086957" />
+        <entry key="app/src/main/res/layout/parking_layout.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/profile_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/wadi_activity.xml" value="0.2290069580078125" />
       </map>
     </option>
   </component>

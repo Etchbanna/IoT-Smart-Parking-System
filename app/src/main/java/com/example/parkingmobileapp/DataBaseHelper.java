@@ -15,7 +15,7 @@ import android.util.Log;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     private static String TAG = "DataBaseHelper"; // Tag just for the LogCat window
-    private static String DB_NAME = "parkings_tracked.db"; // Database name
+    private static String DB_NAME = "parkings-full.db"; // Database name
     private static int DB_VERSION = 1; // Database version
     private final File DB_FILE;
     private SQLiteDatabase myDatabase;

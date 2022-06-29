@@ -22,16 +22,34 @@
 
         </activity>
         <activity
-            android:name=".InfoActivity"
+            android:name=".LuluActivity"
             android:exported="true" >
         </activity>
-
+        <activity
+            android:name=".WadiActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".P90Activity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".BankActivity"
+            android:exported="true" >
+        </activity>
 
         <activity
             android:name=".ParkingLayoutActivity"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".ParkedInfoActivity"
+            android:exported="true" >
+        </activity>
 
-
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" >
         </activity>
     </application>
 

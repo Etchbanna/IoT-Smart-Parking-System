@@ -195,4 +195,154 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    public Cursor getB1Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B1' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB2Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B2' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB3Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B3' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB4Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B4' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB5Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B5' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB6Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B6' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB7Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B7' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB8Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B8' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB9Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B9' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
+    public Cursor getB10Status() {
+        try {
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B10' " +
+                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
+                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, null);
+            if (mCur != null) {
+                mCur.moveToNext();
+            }
+            return mCur;
+        } catch (SQLException mSQLException) {
+            Log.e(TAG, "getTestData >>"+ mSQLException.toString());
+            throw mSQLException;
+        }
+    }
 }
