@@ -1,17 +1,34 @@
 package com.example.parkingmobileapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.content.Intent;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+
+
 
 public class LocationsActivity extends AppCompatActivity {
-    TextView t,t2,t3,t4,t5;
-    Button b1,b2,b3,b4;
+    String URL = "https://192.168.1.11/test_android/index.php";
+//    JSONparser jsonParser = new JSONparser();
+
+
+    TextView t, t2, t3, t4, t5;
+    Button b1, b2, b3, b4;
     ImageView im1, im2, im3, im4;
 
     @Override
@@ -34,8 +51,11 @@ public class LocationsActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LocationsActivity.this, LuluActivity.class);
-                startActivity(intent);
+
+//                Intent intent = new Intent(LocationsActivity.this, LuluActivity.class);
+//                startActivity(intent);
+                query();
+
             }
 
         });
@@ -74,4 +94,57 @@ public class LocationsActivity extends AppCompatActivity {
 
 
     }
+
+    public void query() {
+        StringRequest stringRequest = new StringRequest(
+                Request.Method.GET,
+                Constants.URL_QUERY,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject obj = new JSONObject(response);
+                            if (!obj.getBoolean("error")) {
+                                String stat = obj.getString("status");
+                                System.out.println("Status: "+stat);
+                                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                                finish();
+                            } else {
+                                Toast.makeText(
+                                        getApplicationContext(),
+                                        obj.getString("message"),
+                                        Toast.LENGTH_LONG
+                                ).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        Toast.makeText(
+                                getApplicationContext(),
+                                error.getMessage(),
+                                Toast.LENGTH_LONG
+                        ).show();
+                    }
+                }
+
+        ) {
+//            @Override
+//            protected Map<String, String> getParams() throws AuthFailureError {
+//                Map<String, String> params = new HashMap<>();
+//                params.put("username", username);
+//                params.put("password", password);
+//                return params;
+//            }
+
+        };
+
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+    }
 }
+
