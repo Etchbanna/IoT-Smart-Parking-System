@@ -10,6 +10,7 @@ import android.database.Cursor;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -20,6 +21,8 @@ import android.widget.TextView;
 
 public class ParkingLayoutActivity extends AppCompatActivity {
 
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,8 @@ public class ParkingLayoutActivity extends AppCompatActivity {
         Button B9=(Button)findViewById(R.id.B9);
         Button B10=(Button)findViewById(R.id.B10);
 
+
+
         im1 = findViewById(R.id.imageView17);
         im1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +80,8 @@ public class ParkingLayoutActivity extends AppCompatActivity {
 //            }
 //        });
 
-
         DatabaseAdapter mDbHelper = new DatabaseAdapter(getBaseContext());
+
         mDbHelper.createDatabase();
         mDbHelper.open();
 
@@ -377,13 +382,38 @@ public class ParkingLayoutActivity extends AppCompatActivity {
 
 
 
+        Handler uiCallback =new TimeHandler();
 
 
-        Handler uiCallback = new Handler () {
+
+        Handler uiCallback1 = new Handler () {
             public void handleMessage (Message msg) {
+                String A1Status="null";
+                String A2Status="null";
+                String A3Status="null";
+                String A4Status="null";
+                String A5Status="null";
+                String A6Status="null";
+                String A7Status="null";
+                String A8Status="null";
+                String A9Status="null";
+                String A10Status="null";
+                String B1Status="null";
+                String B2Status="null";
+                String B3Status="null";
+                String B4Status="null";
+                String B5Status="null";
+                String B6Status="null";
+                String B7Status="null";
+                String B8Status="null";
+                String B9Status="null";
+                String B10Status="null";
 
                 Cursor a1c = mDbHelper.getA1Status();
-                String A1Status=a1c.getString(0);
+                if( a1c != null && a1c.moveToFirst() ){
+                    A1Status=a1c.getString(0);
+                    a1c.close();
+                }
                 Log.i("Status:",A1Status+"");
                 if(A1Status.equals("f")){
                     A1.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -395,7 +425,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                 }
 
                 Cursor a2c = mDbHelper.getA2Status();
-                String A2Status=a2c.getString(0);
+                if( a2c != null && a2c.moveToFirst() ){
+                    A2Status=a2c.getString(0);
+                    a2c.close();
+                }
                 Log.i("Status:",A2Status+"");
                 if(A2Status.equals("f")){
                     A2.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -406,7 +439,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A2.setText("A2 \n OCCUPIED");
                 }
                 Cursor a3c = mDbHelper.getA3Status();
-                String A3Status=a3c.getString(0);
+                if( a3c != null && a3c.moveToFirst() ){
+                     A3Status=a3c.getString(0);
+                    a3c.close();
+                }
                 Log.i("Status:",A3Status+"");
                 if(A3Status.equals("f")){
                     A3.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -417,7 +453,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A3.setText("A3 \n OCCUPIED");
                 }
                 Cursor a4c = mDbHelper.getA4Status();
-                String A4Status=a4c.getString(0);
+                if( a4c != null && a4c.moveToFirst() ){
+                     A4Status=a4c.getString(0);
+                    a4c.close();
+                }
                 Log.i("Status:",A4Status+"");
                 if(A4Status.equals("f")){
                     A4.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -428,7 +467,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A4.setText("A4 \n OCCUPIED");
                 }
                 Cursor a5c = mDbHelper.getA5Status();
-                String A5Status=a5c.getString(0);
+                if( a5c != null && a5c.moveToFirst() ){
+                     A5Status=a5c.getString(0);
+                    a5c.close();
+                }
                 Log.i("Status:",A5Status+"");
                 if(A5Status.equals("f")){
                     A5.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -439,7 +481,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A5.setText("A5 \n OCCUPIED");
                 }
                 Cursor a6c = mDbHelper.getA6Status();
-                String A6Status=a5c.getString(0);
+                if( a6c != null && a6c.moveToFirst() ){
+                     A6Status=a6c.getString(0);
+                    a6c.close();
+                }
                 Log.i("Status:",A6Status+"");
                 if(A6Status.equals("f")){
                     A6.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -450,8 +495,11 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A6.setText("A6 \n OCCUPIED");
                 }
                 Cursor a7c = mDbHelper.getA7Status();
-                String A7Status=a7c.getString(0);
-                Log.i("Status:",A5Status+"");
+                if( a7c != null && a7c.moveToFirst() ){
+                     A7Status=a7c.getString(0);
+                    a7c.close();
+                }
+                Log.i("Status:",A7Status+"");
                 if(A7Status.equals("f")){
                     A7.setBackgroundColor(Color.parseColor("#5ED177"));
                     A7.setText("A7 \n FREE");
@@ -461,7 +509,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A7.setText("A7 \n OCCUPIED");
                 }
                 Cursor a8c = mDbHelper.getA8Status();
-                String A8Status=a8c.getString(0);
+                if( a8c != null && a8c.moveToFirst() ){
+                     A8Status=a8c.getString(0);
+                    a8c.close();
+                }
                 Log.i("Status:",A8Status+"");
                 if(A8Status.equals("f")){
                     A8.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -472,7 +523,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A8.setText("A8 \n OCCUPIED");
                 }
                 Cursor a9c = mDbHelper.getA9Status();
-                String A9Status=a9c.getString(0);
+                if( a9c != null && a9c.moveToFirst() ){
+                     A9Status=a9c.getString(0);
+                    a9c.close();
+                }
                 Log.i("Status:",A9Status+"");
                 if(A9Status.equals("f")){
                     A9.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -483,7 +537,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A9.setText("A9 \n OCCUPIED");
                 }
                 Cursor a10c = mDbHelper.getA10Status();
-                String A10Status=a10c.getString(0);
+                if( a10c != null && a10c.moveToFirst() ){
+                     A10Status=a10c.getString(0);
+                    a10c.close();
+                }
                 Log.i("Status:",A10Status+"");
                 if(A10Status.equals("f")){
                     A10.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -494,7 +551,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     A10.setText("A10 \n OCCUPIED");
                 }
                 Cursor b1c = mDbHelper.getB1Status();
-                String B1Status=b1c.getString(0);
+                if( b1c != null && b1c.moveToFirst() ){
+                     B1Status=b1c.getString(0);
+                    b1c.close();
+                }
                 Log.i("Status:",B1Status+"");
                 if(B1Status.equals("f")){
                     B1.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -505,7 +565,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B1.setText("B1 \n OCCUPIED");
                 }
                 Cursor b2c = mDbHelper.getB2Status();
-                String B2Status=b1c.getString(0);
+                if( b2c != null && b2c.moveToFirst() ){
+                     B2Status=b2c.getString(0);
+                    b2c.close();
+                }
                 Log.i("Status:",B2Status+"");
                 if(B2Status.equals("f")){
                     B2.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -516,7 +579,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B2.setText("B2 \n OCCUPIED");
                 }
                 Cursor b3c = mDbHelper.getB3Status();
-                String B3Status=b1c.getString(0);
+                if( b3c != null && b3c.moveToFirst() ){
+                     B3Status=b3c.getString(0);
+                    b3c.close();
+                }
                 Log.i("Status:",B3Status+"");
                 if(B3Status.equals("f")){
                     B3.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -527,7 +593,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B3.setText("B3 \n OCCUPIED");
                 }
                 Cursor b4c = mDbHelper.getB4Status();
-                String B4Status=b4c.getString(0);
+                if( b4c != null && b4c.moveToFirst() ){
+                     B4Status=b4c.getString(0);
+                    b4c.close();
+                }
                 Log.i("Status:",B4Status+"");
                 if(B4Status.equals("f")){
                     B4.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -538,7 +607,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B4.setText("B4 \n OCCUPIED");
                 }
                 Cursor b5c = mDbHelper.getB5Status();
-                String B5Status=b5c.getString(0);
+                if( b5c != null && b5c.moveToFirst() ){
+                     B5Status=b5c.getString(0);
+                    b5c.close();
+                }
                 Log.i("Status:",B5Status+"");
                 if(B5Status.equals("f")){
                     B5.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -549,7 +621,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B5.setText("B5 \n OCCUPIED");
                 }
                 Cursor b6c = mDbHelper.getB6Status();
-                String B6Status=b6c.getString(0);
+                if( b6c != null && b6c.moveToFirst() ){
+                     B6Status=b6c.getString(0);
+                    b6c.close();
+                }
                 Log.i("Status:",B6Status+"");
                 if(B6Status.equals("f")){
                     B6.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -560,7 +635,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B6.setText("B6 \n OCCUPIED");
                 }
                 Cursor b7c = mDbHelper.getB7Status();
-                String B7Status=b7c.getString(0);
+                if( b7c != null && b7c.moveToFirst() ){
+                     B7Status=b7c.getString(0);
+                    b7c.close();
+                }
                 Log.i("Status:",B7Status+"");
                 if(B7Status.equals("f")){
                     B7.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -571,7 +649,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B7.setText("B7 \n OCCUPIED");
                 }
                 Cursor b8c = mDbHelper.getB8Status();
-                String B8Status=b8c.getString(0);
+                if( b8c != null && b8c.moveToFirst() ){
+                     B8Status=b8c.getString(0);
+                    b8c.close();
+                }
                 Log.i("Status:",B8Status+"");
                 if(B8Status.equals("f")){
                     B8.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -582,7 +663,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B8.setText("B8 \n OCCUPIED");
                 }
                 Cursor b9c = mDbHelper.getB9Status();
-                String B9Status=b1c.getString(0);
+                if( b9c != null && b9c.moveToFirst() ){
+                     B9Status=b9c.getString(0);
+                    b9c.close();
+                }
                 Log.i("Status:",B9Status+"");
                 if(B9Status.equals("f")){
                     B9.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -593,7 +677,10 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                     B9.setText("B9 \n OCCUPIED");
                 }
                 Cursor b10c = mDbHelper.getB10Status();
-                String B10Status=b1c.getString(0);
+                if( b10c != null && b10c.moveToFirst() ){
+                     B10Status=b10c.getString(0);
+                    b10c.close();
+                }
                 Log.i("Status:",B10Status+"");
                 if(B10Status.equals("f")){
                     B10.setBackgroundColor(Color.parseColor("#5ED177"));
@@ -613,8 +700,9 @@ public class ParkingLayoutActivity extends AppCompatActivity {
                 for (;;) {
                     // do stuff in a separate thread
                     uiCallback.sendEmptyMessage(0);
+                    uiCallback1.sendEmptyMessage(0);
                     try {
-                        Thread.sleep(3000);    // sleep for 3 seconds
+                        Thread.sleep(1000);    // sleep for 3 seconds
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

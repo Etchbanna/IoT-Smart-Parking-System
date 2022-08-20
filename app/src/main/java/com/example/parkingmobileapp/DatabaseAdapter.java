@@ -1,10 +1,16 @@
 package com.example.parkingmobileapp;
 import java.io.IOException;
+import java.sql.Time;
+import java.util.Calendar;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.util.Log;
+
+import androidx.annotation.RequiresApi;
 
 public class DatabaseAdapter {
 
@@ -45,12 +51,22 @@ public class DatabaseAdapter {
         mDbHelper.close();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA1Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A1' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+
+
+
+
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A1' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+//            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A1' AND minute= ?  " ;
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -60,12 +76,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA2Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A2' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A2' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -75,12 +96,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA3Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A3' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A3' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -90,12 +116,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA4Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A4' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A4' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -105,12 +136,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA5Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A5' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A5' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -120,12 +156,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA6Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A6' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A6' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -135,12 +176,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA7Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A7' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A7' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -150,12 +196,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA8Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A8' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A8' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -165,12 +216,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA9Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A9' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A9' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -180,12 +236,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getA10Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A10' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'A10' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -195,12 +256,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB1Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B1' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B1' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -210,12 +276,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB2Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B2' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B2' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -225,12 +296,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB3Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B3' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B3' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -240,12 +316,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB4Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B4' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B4' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -255,12 +336,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB5Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B5' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B5' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -270,12 +356,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB6Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B6' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B6' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -285,12 +376,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB7Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B7' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B7' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -300,12 +396,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB8Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B8' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B8' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -315,12 +416,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB9Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B9' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B9' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
@@ -330,12 +436,17 @@ public class DatabaseAdapter {
             throw mSQLException;
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Cursor getB10Status() {
         try {
-            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B10' " +
-                    "ORDER BY  cast(year as INT) DESC, cast(month as INT), cast(day as INT), " +
-                    "cast(hour as INT) DESC, cast(minute as INT) DESC LIMIT 1 ";
-            Cursor mCur = myDB.rawQuery(sql, null);
+            int min= TimeHandler.now.get(Calendar.MINUTE);
+            int mon=TimeHandler.now.get(Calendar.MONTH);
+            int day=TimeHandler.now.get(Calendar.DAY_OF_MONTH);
+            int hour=TimeHandler.now.get(Calendar.HOUR);
+            String sql ="SELECT status FROM parkings_tracked WHERE slot_id = 'B10' AND minute<=?"+
+                    " ORDER BY ABS(? - cast(month AS INT)) ASC ,ABS(? - cast(DAY as int)) ASC ," +
+                    "ABS(?- cast(hour as int)) ASC ,ABS(? - cast(minute as int)) ASC LIMIT 1 ";
+            Cursor mCur = myDB.rawQuery(sql, new String[]{String.valueOf(min),String.valueOf(mon),String.valueOf(day),String.valueOf(hour),String.valueOf(min)});
             if (mCur != null) {
                 mCur.moveToNext();
             }
