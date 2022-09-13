@@ -9,14 +9,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class P90Activity extends AppCompatActivity {
+public class HealthCenterActivity extends AppCompatActivity {
     TextView t,t2,t3,t4,t5,t6,t7;
     Button b1,b2;
     ImageView im1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p90_activity);
+        setContentView(R.layout.healthcenter_activity);
         t = findViewById(R.id.textView10);
         t2 = findViewById(R.id.textView9);
         t3 = findViewById(R.id.textView7);
@@ -24,21 +24,21 @@ public class P90Activity extends AppCompatActivity {
         t4 = findViewById(R.id.textView12);
         t5 = findViewById(R.id.textView11);
         t6 = findViewById(R.id.textView5);
-        b1 = findViewById(R.id.button2);
-        b2 = findViewById(R.id.button3);
+        b1 = findViewById(R.id.C12);
+        b2 = findViewById(R.id.C11);
         im1 = findViewById(R.id.imageView17);
-        im1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(P90Activity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
+//        im1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(HealthCenterActivity.this, ProfileActivity.class);
+//                startActivity(intent);
+//            }
 
-        });
+//        });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(P90Activity.this, ParkingLayoutActivity.class);
+                Intent intent = new Intent(HealthCenterActivity.this, Layout3.class);
                 startActivity(intent);
             }
 

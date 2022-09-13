@@ -3,24 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent" android:layout_height="fill_parent">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LuluActivity">
+    tools:context=".MarinaActivity">
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="211dp"
         android:layout_height="31dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="37dp"
         android:layout_marginEnd="184dp"
+        android:layout_marginBottom="35dp"
         android:text="Working Hours:"
         android:textColor="#448AFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="243dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="134dp"
+        android:text="Downtown"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView11"
@@ -28,24 +44,27 @@
         android:layout_height="35dp"
         android:layout_marginStart="34dp"
         android:layout_marginEnd="166dp"
+        android:layout_marginBottom="64dp"
         android:text="Saturday-Thursday: 8AM-11PM"
         android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/C11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="211dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="184dp"
+        android:layout_marginBottom="40dp"
         android:text="Charging Rates:"
         android:textColor="#448AFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
@@ -55,7 +74,9 @@
         android:layout_marginEnd="234dp"
         android:text="First Hour: $8  Subsequent Hour: $5"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -66,7 +87,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="115dp"
-        android:text="Parking Location Info: Lulu Hypermarket Garage"
+        android:text="Parking Location Info: Marina Hotel Garage"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,47 +100,22 @@
         android:layout_width="211dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="184dp"
         android:text="Address:"
         android:textColor="#448AFF"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="243dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="134dp"
-        android:text="Teseen, New Cairo, Cairo Governorate"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/C11"
         android:layout_width="386dp"
         android:layout_height="61dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="570dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="#00FFFFFF"
-        android:text="Get Direction on Google Maps"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="386dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="631dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="39dp"
         android:backgroundTint="#00FFFFFF"
@@ -129,18 +125,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="342dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/lulu_hypermarket_768x430" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -195,6 +179,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="326dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/_221m120009bt1dak152e_r_1100_824_r5_q70_d" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

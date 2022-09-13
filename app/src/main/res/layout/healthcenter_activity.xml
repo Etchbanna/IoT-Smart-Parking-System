@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".P90Activity">
+    tools:context=".HealthCenterActivity">
 
     <ImageView
         android:id="@+id/imageView13"
@@ -104,7 +104,7 @@
         android:layout_height="53dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="29dp"
-        android:text="Parking Location Info: Point 90 Mall Garage"
+        android:text="Parking Location Info: Healthcenter Garage"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,27 +141,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/C11"
         android:layout_width="386dp"
         android:layout_height="61dp"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="570dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="#00FFFFFF"
-        android:text="Get Direction on Google Maps"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="386dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="631dp"
+        android:layout_marginTop="530dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="39dp"
         android:backgroundTint="#00FFFFFF"
@@ -183,20 +167,6 @@
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="316dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.061"
-        app:srcCompat="@drawable/point_90_new_cairo_vistacool_pacifica_5" />
-
-    <ImageView
         android:id="@+id/imageView11"
         android:layout_width="57dp"
         android:layout_height="51dp"
@@ -205,5 +175,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/download"
+        tools:layout_editor_absoluteY="179dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

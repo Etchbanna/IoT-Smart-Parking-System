@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/C12"
         android:layout_width="386dp"
         android:layout_height="61dp"
         android:layout_marginStart="13dp"
@@ -112,7 +112,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/C11"
         android:layout_width="386dp"
         android:layout_height="61dp"
         android:layout_marginStart="13dp"

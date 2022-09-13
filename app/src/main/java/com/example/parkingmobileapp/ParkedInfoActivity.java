@@ -23,8 +23,8 @@ public class ParkedInfoActivity extends AppCompatActivity {
         t4 = findViewById(R.id.textView4);
         b1 = findViewById(R.id.button);
         b2 = findViewById(R.id.button5);
-        b3 = findViewById(R.id.button6);
-        b4 = findViewById(R.id.button7);
+        b3 = findViewById(R.id.C8);
+        b4 = findViewById(R.id.C7);
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

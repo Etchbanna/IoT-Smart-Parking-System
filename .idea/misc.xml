@@ -10,7 +10,15 @@
         <entry key="app/src/main/res/font/.xml" value="0.1" />
         <entry key="app/src/main/res/font/actor.xml" value="0.1" />
         <entry key="app/src/main/res/layout/ParkedInfoActivity.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/activity_forget_password.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_layout3.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_login3.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2645904541015625" />
+        <entry key="app/src/main/res/layout/activity_marina_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_wady_layout.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/bank_activity.xml" value="0.26220703125" />
         <entry key="app/src/main/res/layout/info_activity.xml" value="0.3843994140625" />
         <entry key="app/src/main/res/layout/locations_activity.xml" value="0.19216461181640626" />
