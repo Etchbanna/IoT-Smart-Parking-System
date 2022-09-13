@@ -39,7 +39,7 @@ public class WadiActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WadiActivity.this, ParkingLayoutActivity.class);
+                Intent intent = new Intent(WadiActivity.this, WadyLayout.class);
                 startActivity(intent);
             }
 

@@ -59,18 +59,17 @@ public class LocationsActivity extends AppCompatActivity {
         System.out.println(TimeHandler.now.get(Calendar.HOUR));
 
         System.out.println(TimeHandler.now);
+
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                Intent intent = new Intent(LocationsActivity.this, LuluActivity.class);
-//                startActivity(intent);
-                System.out.println("I am here");
-                query();
-
+                Intent intent = new Intent(LocationsActivity.this, LuluActivity.class);
+                startActivity(intent);
             }
 
         });
+
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +78,8 @@ public class LocationsActivity extends AppCompatActivity {
             }
 
         });
+
+
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
