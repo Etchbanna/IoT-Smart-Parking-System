@@ -4,8 +4,14 @@
         <item>@font/</item>
         <item>@font/actor</item>
         <item>@font/aladin</item>
+        <item>@font/alata</item>
         <item>@font/alatsi</item>
         <item>@font/amarante</item>
         <item>@font/amiko</item>
+        <item>@font/archivo_black</item>
+        <item>@font/belgrano</item>
+        <item>@font/chicle</item>
+        <item>@font/convergence</item>
+        <item>@font/trade_winds</item>
     </array>
 </resources>

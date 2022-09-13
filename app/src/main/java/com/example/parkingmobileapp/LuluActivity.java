@@ -24,8 +24,8 @@ public class LuluActivity extends AppCompatActivity {
         t4 = findViewById(R.id.textView12);
         t5 = findViewById(R.id.textView11);
         t6 = findViewById(R.id.textView5);
-        b1 = findViewById(R.id.button2);
-        b2 = findViewById(R.id.button3);
+        b1 = findViewById(R.id.C12);
+        b2 = findViewById(R.id.C11);
         im1 = findViewById(R.id.imageView17);
         im1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class LuluActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LuluActivity.this, ParkingLayoutActivity.class);
+                Intent intent = new Intent(LuluActivity.this, MarinaLayout.class);
                 startActivity(intent);
             }
 
